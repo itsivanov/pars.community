@@ -1,0 +1,9 @@
+#imgPreload
+{
+    width: 100px;
+    display: inline-block;
+    margin: 25px auto 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+

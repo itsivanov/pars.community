@@ -1,0 +1,372 @@
+/* All Mobile devices for 2016*/
+@media only screen and (max-device-width: 1024px) and (max-device-height: 1366px) {
+ 
+}
+
+    /* Smaller background for smaller devices */
+    @media only screen and (max-device-width: 740px) {/* (min-device-width: 320px) and */
+.popular_net, .popular_gradient {
+    display: none;
+  }
+      /*----------------------------------------modal window-------------------------------------------------*/
+      .contact-inner {
+        width: 80vw;
+      }
+      .contact-inner {
+        padding: 3vh 2vh;
+      }
+      .thanks__icon {
+        width: 15vw;
+        height: 15vw;
+      }
+      .thanks__mark {
+        width: 7vw;
+        height: 7vw;
+      }
+      .thanks__title {
+        font-size: 4vw;
+      }
+      .thanks__text {
+        font-size: 2.5vw;
+      }
+      .thanks__desctription {
+        vertical-align: top;
+        padding-top: 2vw;
+      }
+    /*--------------------------------------------------------menu---------------------------------------*/
+    .menu__visible {
+      width: 100%;
+      height: 17vw;
+      padding: 7.2vw 5.5vw;
+    }
+    .menu {
+      width: 88vw;
+    }
+    .menu__inner {
+      width: 100%;
+    }
+    .copyright-wrapper {
+      display: none;
+    }
+    .menu__btn {
+      position: initial;
+      margin: 0;
+      width: 4.5vw;
+    }
+    .btn-search {
+      margin-left: 100%;
+      float: right;
+      width: 6vw;
+      height: auto;
+      margin-top: -1vw;
+    }
+    .close-btn {
+      position: absolute;
+      left: 4vw;
+      top: 5vw;
+
+    }
+    .wrapper-search {
+      padding-top: 4vw;
+      padding-bottom: 3vw;
+    }
+    /*---------------------------------------photo-page--------------------------------------------------*/
+    html body .index_main .page__wrapper {
+      width: 90vw;
+    }
+    .page-index_main {
+      padding-top: 28vw;
+    }
+    .page__social {
+      position: initial;
+      width: 80vw;
+      margin-bottom: 12vw;
+      margin-top: 5vw;
+    }
+    .page__social-item {
+      display: inline-block;
+    }
+    .page__social:after {
+      display:none;
+    }
+    .page__title {
+      font-size: 8vw;
+      line-height: 10vw;
+    }
+    .page__info-item {
+      font-size: 4.4vw;
+      padding: 8vw 0;
+    }
+    .page__info-item:nth-child(2) {
+      margin: 0 0 0 6vw;
+    }
+    .page__text {
+      font-size: 6vw;
+      line-height: 10vw;
+      padding-top: 9.6vw;
+
+    }
+    .page__link {
+      font-size: 5.4vw;
+      margin: 4.7vw 0;
+    }
+    .page__posts-title:before {
+      display: none;
+    }
+    .page__posts-title {
+      font-size: 9.4vw;
+      line-height: 10vw;
+    }
+    .page__posts-item {
+      width: 41vw;
+      height: 41vw;
+      margin-right: 6.7vw;
+      margin-bottom: 6.7vw;
+    }
+    .page__posts-item:nth-child(2n+2) {
+      margin-right: 0;
+    }
+    .page__posts {
+      padding: 16.2vw 0;
+    }
+    .mobile__footer {
+      position: relative;
+      z-index: 300;
+      display: block;
+      height: 10vh;
+      width: 100%;
+      background: #141414;
+    }
+    .mobile__footer-copyright {
+      text-align: center;
+      font-family: 'quicksand-regular';
+      font-size: 12px;
+      color: #bfbebe;
+      line-height: 10vh;
+    }
+/*--------------------------------------- END photo-page--------------------------------------------------*/
+
+    .mobile__footer {
+      position: relative;
+      z-index: 300;
+      display: block;
+      height: 10vh;
+      width: 100%;
+      background: #141414;
+    }
+    .mobile__footer-copyright {
+      text-align: center;
+      font-family: 'OpenSans-Semibold';
+      font-size: 12px;
+      color: #fff;
+      line-height: 10vh;
+    }
+    /*-----------------------------------first slide-----------------------------------------------*/
+    .popular {
+     padding-top: 20vw;
+     height: auto;
+    background: #101010;
+    }
+    .popular__logo {
+      width: 70vw;
+      margin: 0 auto;
+      position: initial;
+      transform: translateY(0);
+      padding-bottom: 5vw;
+    }
+    .popular__list {
+      width: 90vw;
+      position: initial;
+      transform: translateY(0);
+      /* margin-top: 40vw; */
+    }
+    .popular__item {
+      width: 40vw;
+      height: 40vw;
+      margin: 0 9vw 9vw 0;
+    }
+    .popular__item:nth-child(3) {
+          margin: 0 9vw 9vw 0;
+      /* width: 70vw;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -40vw;
+      margin: 0 auto; */
+    }
+    /* .popular__item:nth-child(3n+2) {
+      margin-right: 0;
+    } */
+    .popular__item:nth-child(2n+2) {
+      margin-right: 0;
+    }
+    .go-down {
+      display: none;
+    }
+  /*-------------------------------------second slide------------------------------*/
+    .latest {
+      padding: 0;
+    }
+    .latest__inner {
+      width: 90vw;
+    }
+    span.name_cat_instead_logo {
+      font-size: 10vw;
+    }
+    .latest__inner .latest__item-logo {
+          padding-top: 20vw;
+          padding-bottom: 3vw;
+          width: 100%;
+          margin: 0 auto;
+          float: none;
+          height: auto;
+          text-align: center;
+    }
+    .latest__item {
+      width: 40vw;
+      height: 40vw;
+      margin: 0 9vw 9vw 0;
+    }
+    .latest__item:nth-child(2n+2) {
+      margin-right: 0;
+    }
+    .menu-item:last-child{
+      padding-bottom: 5vh;
+      margin: 0;
+    }
+     @media only screen and (orientation: landscape) {
+        .menu__visible {
+          height: 8vh;
+          padding: 7vh 7vh;
+        }
+        .btn-search {
+          width: 5vh;
+        }
+        .menu__btn {
+          width: 20%;
+        }
+        .popular {
+          padding-top: 20vh;
+        }
+        .menu__button {
+        font-size: 4.8vh;
+      }
+      .search-input {
+       width: 50%;
+    height: 30px;
+      }
+    }
+}
+
+
+
+    /* Only portrait styles */
+    @media only screen and (orientation: portrait) {
+
+    }
+
+    @media only screen  and (min-device-width: 320px) 
+  and (max-device-width: 735px) and  (orientation: landscape) {
+  
+        
+        .text-header{
+            height: 90%;
+            width: auto;
+        }    
+  .index_main .page__wrapper {
+  }
+  .page__title {
+    font-size: 4.3vh;
+    line-height: 4.9vh;
+  }
+  .page__info-item {
+    font-size: 1.56vh;
+    line-height: 6vh;
+      padding-top: 1vw;
+      padding-bottom: 1vw;
+  }
+  .page__img-wrapper {
+    margin: 3.5vh 0 0 0;
+  }
+  .page__text {
+    font-size: 1.9vh;
+    line-height: 3.7vh;
+    padding-top: 4.6vh;
+  }
+  .page__link {
+    font-size: 1.92vh;
+    line-height: 4vh;
+    margin: 3.6vh 0;
+  }
+  .page__posts-title {
+    font-size: 3.3vh;
+    line-height: 4vh;
+    margin-top: 3.5vh;
+  }
+  .page__posts {
+    padding: 5vh 0;
+  }
+  .page__posts-link {
+    font-size: 1.63vh;
+    line-height: 2vh;
+  }
+  .page__social {
+/*    width: 22vh;*/
+    padding-left: 3.2vh;
+      margin-top: 1vw;
+      margin-bottom: 0;
+  }
+        .page-index_main{
+            padding-top: 15vw;
+        }
+ }
+
+@media only screen and (max-device-height: 640px) and (orientation: landscape) {
+      
+
+      /*----------------------------------------modal window-------------------------------------------------*/
+      .contact-inner {
+        width: 50%;
+      }
+      .thanks__icon {
+        width: 10vw;
+        height: 10vw;
+    }
+    .thanks__mark {
+      width: 5vw;
+      height: 5vw;
+    }
+    .thanks__title {
+      font-size: 3vw;
+    }
+    .thanks__text {
+      font-size: 1.6vw;
+    }
+    .thanks__desctription {
+      vertical-align: top;
+      padding-top: 2vw;
+    }
+
+
+}
+@media screen and (max-aspect-ratio: 16/12) { 
+
+  .page__social {
+    position: inherit;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-left: 0;
+    padding-bottom: 2vw;
+  }
+  .page__social-item_desc {
+    display: none;
+  }
+  .page__social-item {
+    display: inline-block;
+  }
+  .page__social:after {
+      display:none;
+    }
+
+}

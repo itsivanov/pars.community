@@ -1,0 +1,41 @@
+@media only screen and (min-device-width: 1025px) and (min-device-height: 725px) {
+.copyright-wrapper {
+    position: fixed;
+    left: 3.8vw;
+    top: 80vh;
+    z-index: 200;
+}
+.copyright{
+    font-family: 'OpenSans-Semibold';
+    font-size: 1.7vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(270deg);
+    z-index: 10;
+    white-space: nowrap;
+  }
+  .contact__wrapper {
+    position: fixed;
+    right: 4.5vw;
+    top: 83vh;
+    z-index: 200;
+}
+  .contact{
+    font-family: 'OpenSans-Semibold';
+    font-size: 1.7vh;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-270deg);
+    z-index: 10;
+    white-space: nowrap;
+  }
+
+
+
+
+
+}

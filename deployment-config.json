@@ -1,0 +1,9 @@
+{
+    "type": "ftp",
+    "host": "binboro.com",
+    "username": "wid",
+    "password": "CvIfhIsH",
+    "port": 21,
+    "remotePath": "",
+    "uploadOnSave": false
+}

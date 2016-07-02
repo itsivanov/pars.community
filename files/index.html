@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Queued Photo Uploader - Standalone Showcase from digitarald.de</title>
+	<meta name="author" content="Harald Kirschner, digitarald.de" />
+	<meta name="copyright" content="Copyright 2009 Harald Kirschner" />
+
+
+	<script type="text/javascript" src="source/mootools.js"></script>
+	<script type="text/javascript" src="source/Swiff.Uploader.js"></script>
+	<script type="text/javascript" src="source/Fx.ProgressBar.js"></script>
+	<script type="text/javascript" src="source/Lang.js"></script>
+	<script type="text/javascript" src="source/FancyUpload2.js"></script>
+	<script type="text/javascript">
+
+
+window.addEvent('domready', function() {
+
+
+
+	var up = new FancyUpload2($('demo-status'), $('demo-list'), {
+
+		verbose: false,
+
+
+		url: $('form-demo').action,
+
+
+		path: 'source/Swiff.Uploader.swf',
+
+
+		typeFilter: {
+			'Изображения (*.jpg, *.jpeg, *.gif, *.png)': '*.jpg; *.jpeg; *.gif; *.png'
+		},
+
+
+		target: 'demo-browse',
+
+
+		onLoad: function() {
+			$('demo-status').removeClass('hide');
+			$('demo-fallback').destroy();
+
+
+			this.target.addEvents({
+				click: function() {
+					return false;
+				},
+				mouseenter: function() {
+					this.addClass('hover');
+				},
+				mouseleave: function() {
+					this.removeClass('hover');
+					this.blur();
+				},
+				mousedown: function() {
+					this.focus();
+				}
+			});
+
+
+			$('demo-clear').addEvent('click', function() {
+				up.remove();
+				return false;
+			});
+
+			$('demo-upload').addEvent('click', function() {
+				up.start();
+				return false;
+			});
+		},
+
+
+		onSelectFail: function(files) {
+			files.each(function(file) {
+				new Element('li', {
+					'class': 'validation-error',
+					html: file.validationErrorMessage || file.validationError,
+					title: MooTools.lang.get('FancyUpload', 'removeTitle'),
+					events: {
+						click: function() {
+							this.destroy();
+						}
+					}
+				}).inject(this.list, 'top');
+			}, this);
+		},
+
+
+		onFileSuccess: function(file, response) {
+			var json = new Hash(JSON.decode(response, true) || {});
+
+			if (json.get('status') == '1') {
+				file.element.addClass('file-success');
+				file.info.set('html', '<strong>Информация о файле:</strong> ' + json.get('width') + ' x ' + json.get('height') + 'px<br>Новое имя файла: ' + json.get('new') + '');
+			} else {
+				file.element.addClass('file-failed');
+				file.info.set('html', '<strong>Ошибка:</strong> ' + json.get('error'));
+			}
+		},
+
+
+		onFail: function(error) {
+			switch (error) {
+				case 'hidden':
+					alert('To enable the embedded uploader, unblock it in your browser and refresh (see Adblock).');
+					break;
+				case 'blocked':
+					alert('To enable the embedded uploader, enable the blocked Flash movie (see Flashblock).');
+					break;
+				case 'empty':
+					alert('A required file was not found, please be patient and we fix this.');
+					break;
+				case 'flash':
+					alert('To enable the embedded uploader, install the latest Adobe Flash plugin.')
+			}
+		}
+
+	});
+
+});
+	</script>
+<link rel="stylesheet" type="text/css" href="source/styles.css">
+
+
+</head>
+<body>
+
+	<div class="container">
+			<div>
+					<form action="server/script.php" method="post" enctype="multipart/form-data" id="form-demo">
+
+							<fieldset id="demo-fallback">
+									<legend>Загрузить изображения</legend>
+									<p>
+											В вашем браузере отключено выполнение JavaScript. Для корректной работы требуется включить JavaScript.
+									</p>
+									<label for="demo-photoupload">
+											Загрузить фото:
+											<input type="file" name="Filedata" />
+									</label>
+							</fieldset>
+
+							<div id="demo-status" class="hide">
+									<p>
+											<a href="#" id="demo-browse">Выбрать файлы</a> |
+											<a href="#" id="demo-clear">Очистить список</a> |
+											<a href="#" id="demo-upload">Начать загрузку</a>
+									</p>
+									<div>
+											<strong class="overall-title"></strong><br />
+											<img src="assets/progress-bar/bar.gif" class="progress overall-progress" />
+									</div>
+									<div>
+											<strong class="current-title"></strong><br />
+											<img src="assets/progress-bar/bar.gif" class="progress current-progress" />
+									</div>
+										<div class="current-text"></div>
+							</div>
+
+					<ul id="demo-list"></ul>
+
+					</form>
+			</div>
+	</div>
+
+
+</body>
+</html>

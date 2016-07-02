@@ -1,0 +1,6 @@
+web/uploads/articles/*
+web/upload/*
+runtime/*
+config/environment_db.php
+config/settings.txt
+*.log
